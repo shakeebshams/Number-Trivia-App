@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/background_hdpi" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:includeFontPadding="?android:attr/windowOverscan"
+        android:text="Number Trivia"
+        android:textColor="@android:color/background_light"
+        android:textSize="38sp"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toTopOf="@+id/detailTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundView" />
+
+    <TextView
+        android:id="@+id/detailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="17dp"
+        android:text="Please Choose a Topic to Begin!"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/randomButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <Button
+        android:id="@+id/randomButton"
+        android:layout_width="138dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="getTopic"
+        android:padding="10dp"
+        android:tag="random"
+        android:text="Random"
+        android:textIsSelectable="false"
+        app:layout_constraintBottom_toTopOf="@+id/mathButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTextView" />
+
+    <Button
+        android:id="@+id/mathButton"
+        android:layout_width="139dp"
+        android:layout_height="85dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="getTopic"
+        android:padding="10dp"
+        android:tag="math"
+        android:text="Math"
+        app:layout_constraintBottom_toTopOf="@+id/dateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomButton" />
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="138dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:onClick="getTopic"
+        android:tag="date"
+        android:text="Date"
+        app:layout_constraintBottom_toTopOf="@+id/yearButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mathButton" />
+
+    <Button
+        android:id="@+id/yearButton"
+        android:layout_width="140dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="getTopic"
+        android:tag="year"
+        android:text="Year"
+        app:layout_constraintBottom_toTopOf="@+id/creditTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateButton" />
+
+    <TextView
+        android:id="@+id/creditTextView"
+        android:layout_width="284dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Developed by Shakeeb Shams"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/backgroundView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.716"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backgroundView"
+        app:layout_constraintVertical_bias="0.485" />
+
+</android.support.constraint.ConstraintLayout>
